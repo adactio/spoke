@@ -34,7 +34,7 @@ map.on('load', () => {
     let sessions;
 
     map.once('idle', () => {
-        d3.json("./data/sessions.json", function (d) {
+        d3.json("https://raw.githubusercontent.com/adactio/TheSession-data/refs/heads/main/json/sessions.geojson", function (d) {
             sessions = d;
             getSpoke(sessions);
         });
