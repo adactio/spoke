@@ -22,12 +22,13 @@ let initLoad = true;
 mapboxgl.accessToken = 'pk.eyJ1Ijoiam9udHkiLCJhIjoiME94TU43NCJ9.mkBQ8Fj37lB6xobSjyL_PQ';
 const map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
+    style: 'mapbox://styles/mapbox/streets-v12',
     center: [-7.5029786, 53.4494762],
     zoom: 9,
     projection: 'globe',
     maxZoom: 16
 });
+map.addControl(new mapboxgl.NavigationControl());
 
 map.on('load', () => {
     let sessions;
